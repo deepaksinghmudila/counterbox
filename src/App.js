@@ -1,18 +1,11 @@
-import React,{useState} from "react";
-import Header from './Header.js';
+import React from "react"; 
 import Counter from './Counter';
 
-const App = () => {
-  
-  const [copy, setCopy] = useState(false);
-  const [clear, setClear] = useState(false);
-  
-
+const App = () => {  
+   
   return (
     <>
-      <Header setCopy={setCopy} setClear={setClear} />       
-      <br/>
-      <Counter />
+      <Counter  />
 
     </>
   );
