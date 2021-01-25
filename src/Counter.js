@@ -42,37 +42,47 @@ const Counter = () => {
 
     return (
       <>
-        <h1>Counter Box </h1>
-        <button className="copy" onClick={copyToClipboard}>
-                Copy
-        </button>
+        <div className="container">
+          <div className="header">
+            <h1>Counter Box </h1>
+            <button className="copy" onClick={copyToClipboard}>
+              Copy
+            </button>
             <button className="clear" onClick={clearTextarea}>
-                Clear
-        </button>
-            
-        <textarea
-          name="textarea"
-          placeholder="Type text or paste"
-          style={{ width: "50em", height: "20em" }}
-          value={text}
-          onChange={handleChange}
-          ref={textAreaRef}
-          className="textarea"
-        >
-          Type your text or paste
-        </textarea>
-
-        <div className="count-box">
-          <h1 className="characters">{char}</h1>
-          <span>Characters</span>
-        </div>
-        <div className="count-box">
-          <h1 className="words">{words}</h1>
-          <span>Words</span>
-        </div>
-        <div className="count-box">
-          <h1 className="reading-time">{time}</h1>
-          <span>Reading time</span>
+              Clear
+            </button>
+          </div>
+          <div className="text">
+            <textarea
+              name="textarea"
+              placeholder="Type text or paste"
+              style={{ width: "50em", height: "20em" }}
+              value={text}
+              onChange={handleChange}
+              ref={textAreaRef}
+              className="textarea"
+            >
+              Type your text or paste
+            </textarea>
+          </div>
+          <div className="counter">
+            <div className="count-box">
+              <h1 className="characters">{char}</h1>
+              <span>Characters</span>
+            </div>
+            <div className="count-box">
+              <h1 className="words">{words}</h1>
+              <span>Words</span>
+            </div>
+            <div className="count-box">
+              <h1 className="reading-time">{time}</h1>
+              <span>Reading time</span>
+            </div>
+          </div>
+          <footer>             
+            Made by Deepak Singh Mudila
+          </footer>
+           
         </div>
       </>
     );
